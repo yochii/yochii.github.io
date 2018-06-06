@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="test,lo," />
+  <meta name="keywords" content="vue," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="测试">
-<meta name="keywords" content="test,lo">
+<meta name="description" content="part1 vm =&amp;gt; viewModel 数据最终都会被vm 所代理。  双大括号取值表达式，默认可以不写this，a可以是表达式 ，赋值运算，计算，三元表达式（但尽量少写逻辑，使用computed处理）  指令：dom元素的行间属性，vue提供了内置的指令，必须以v-开头，基本上以key value的形式，value的部分为变量。  v-model （表单元素 忽略掉value, che">
+<meta name="keywords" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试">
-<meta property="og:url" content="http://yoursite.com/2018/06/06/测试/index.html">
+<meta property="og:title" content="vue指令">
+<meta property="og:url" content="http://yoursite.com/2018/06/06/vue指令/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="测试">
+<meta property="og:description" content="part1 vm =&amp;gt; viewModel 数据最终都会被vm 所代理。  双大括号取值表达式，默认可以不写this，a可以是表达式 ，赋值运算，计算，三元表达式（但尽量少写逻辑，使用computed处理）  指令：dom元素的行间属性，vue提供了内置的指令，必须以v-开头，基本上以key value的形式，value的部分为变量。  v-model （表单元素 忽略掉value, che">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-06T11:14:30.000Z">
+<meta property="og:updated_time" content="2018-06-06T12:20:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试">
-<meta name="twitter:description" content="测试">
+<meta name="twitter:title" content="vue指令">
+<meta name="twitter:description" content="part1 vm =&amp;gt; viewModel 数据最终都会被vm 所代理。  双大括号取值表达式，默认可以不写this，a可以是表达式 ，赋值运算，计算，三元表达式（但尽量少写逻辑，使用computed处理）  指令：dom元素的行间属性，vue提供了内置的指令，必须以v-开头，基本上以key value的形式，value的部分为变量。  v-model （表单元素 忽略掉value, che">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/06/测试/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/06/vue指令/"/>
 
 
 
 
 
-  <title>测试 | </title>
+  <title>vue指令 | </title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/测试/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/vue指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yochii">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">测试</h1>
+          <h1 class="post-title" itemprop="name headline">vue指令</h1>
         
 
         <div class="post-meta">
@@ -262,7 +262,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-06T19:12:39+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-06T20:11:16+08:00">
                 2018-06-06
               </time>
             
@@ -300,7 +300,111 @@
       
 
       
-        <p>测试</p>
+        <h2 id="part1"><a href="#part1" class="headerlink" title="part1"></a>part1</h2><ul>
+<li><p>vm =&gt; viewModel 数据最终都会被vm 所代理。</p>
+</li>
+<li><p>双大括号取值表达式，默认可以不写this，a可以是表达式 ，赋值运算，计算，三元表达式（但尽量少写逻辑，使用computed处理）</p>
+</li>
+<li><p>指令：dom元素的行间属性，vue提供了内置的指令，必须以v-开头，基本上以key value的形式，value的部分为变量。</p>
+</li>
+<li><p>v-model （表单元素 忽略掉value, checked, selected）将数据绑定到视图上。视图修改后会影响数据的变化。</p>
+</li>
+<li><p>v-text 取代大括号解决块级闪烁问题，后期都可以不采用，使用v-cloak要加样式display:none</p>
+</li>
+<li><p>v-once ：绑定一次，数据再变化也不会导致视图刷新，写在不想刷新的标签上。</p>
+</li>
+<li><p>v-html：将html字符串转化为html</p>
+</li>
+<li><p>v-for: 循环（数组，对象，字符串，数字）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(value,index) in/of arr"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>事件v-on(@)</p>
+</li>
+<li><p>绑定给dom元素，函数需要定义在methods中，不能和data重名，this指向的是实例，不能使用箭头函数。事件源对象，如果不写括号，会自动传入，否则只能手动传入$event</p>
+</li>
+</ul>
+<h2 id="part2"><a href="#part2" class="headerlink" title="part2"></a>part2</h2><ul>
+<li><p>Promise（结合几个promise的json和html看）</p>
+<p>Promise 是为了解决回调问题。</p>
+<p>同步的居多，onclick是异步的。</p>
+<p>在node和框架里一般都是异步的。</p>
+</li>
+<li><p>fetch</p>
+<p>完全基于promise。</p>
+<p>成功的调用</p>
+</li>
+<li><p>Async/Await</p>
+<p>终极的异步解决方案</p>
+</li>
+<li><p>build框架</p>
+<p>iviewui/</p>
+</li>
+</ul>
+<h2 id="part3"><a href="#part3" class="headerlink" title="part3"></a>part3</h2><ul>
+<li><p>修饰符 . number .lazy</p>
+</li>
+<li><p>按键修饰符 .enter .ctrl .keycode</p>
+</li>
+<li><p>事件</p>
+<ul>
+<li>@事件 .stop<br>stopPropagation, cancelBubble = true;</li>
+<li>@事件 .capture<br>xxx.addEventListener(‘click’,fn,true)</li>
+<li>@事件 .prevent<br>preventDefault,reutrnValue=false</li>
+<li>@事件 .once<br>on(‘click’) off(‘click’)</li>
+<li>@事件 .self<br>e.srcElement&amp;&amp;e.target 判断事件源绑定事件</li>
+</ul>
+</li>
+<li><p>Filters 实例上可以用(4.cart_computed)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;<span class="string">'123'</span> | my(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)&#125;&#125;</span><br><span class="line">filters:&#123;</span><br><span class="line">	my(data,param1,param2)&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Computed 计算属性 不是方法</p>
+<ul>
+<li>方法不会有缓存，computed会根据依赖（归vue管理的数据，可以响应式变化的）的属性进行缓存</li>
+<li>有两部分组成，有get和set组成，可以仅写get。</li>
+<li>set用处：<ul>
+<li>一般情况下通过js赋值影响其他人</li>
+<li>表单元素设置值的时候调用set</li>
+</ul>
+</li>
+<li>computed 不支持异步</li>
+</ul>
+</li>
+<li><p>Watch 观察者</p>
+<ul>
+<li>观察a的值变化，在a的值变化后干一件事儿。</li>
+</ul>
+</li>
+<li><p>v-if／v-show</p>
+<ul>
+<li>v-if操作的是dom，可以和v-else-if,v-else连用，写一些判断，template支持</li>
+<li>v-show操作的是样式，template不支持</li>
+</ul>
+</li>
+<li><p>v-bind绑定 简写:</p>
+<ul>
+<li><p>动态绑定属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"src"</span> <span class="attr">:width</span>=<span class="string">"w"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>实现单页开发的方式</p>
+<ul>
+<li>通过hash值记录跳转的页面路径（可以产生历史管理）</li>
+<li>浏览器自带的历史管理的方法history.go(-1)（history.pushState())，需要服务端支持，在刷新时可能会导致找不到路径</li>
+<li>开发时，使用hash方式；上线的话会使用history的方式</li>
+</ul>
+</li>
+</ul>
+<p>vue4</p>
+<ul>
+<li>钩子函数<ul>
+<li>beforeCreate created</li>
+<li>beforeMount mounted</li>
+<li>beforeUpdate updated</li>
+<li>beforeDestroy destroyed</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -318,9 +422,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"># test</a>
-          
-            <a href="/tags/lo/" rel="tag"># lo</a>
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
         </div>
       
@@ -333,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/06/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/06/06/webpack的加载和打包指令/" rel="next" title="webpack的加载和打包指令">
+                <i class="fa fa-chevron-left"></i> webpack的加载和打包指令
               </a>
             
           </div>
@@ -393,8 +495,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -413,7 +524,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -437,6 +548,16 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:ghostflare101@hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -449,6 +570,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#part1"><span class="nav-number">1.</span> <span class="nav-text">part1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part2"><span class="nav-number">2.</span> <span class="nav-text">part2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part3"><span class="nav-number">3.</span> <span class="nav-text">part3</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
